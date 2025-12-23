@@ -5,7 +5,7 @@ export interface Project {
   longDescription: string
   image?: string
   technologies: string[]
-  category: 'Infrastructure' | 'Frontend' | 'Backend' | 'DevOps' | 'AI/ML' | 'Entrepreneurship'
+  category: 'Infrastructure' | 'Frontend' | 'Backend' | 'DevOps' | 'AI/ML' | 'Entrepreneurship' | 'Hackathon'
   status: 'Completed' | 'In Progress' | 'Archived'
   timeline: string
   outcomes: string[]
@@ -26,52 +26,54 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'ita-challenge-2018',
-    title: 'SpecQuimica - Toxicology Testing',
-    description: 'Won 1st place at ITA Challenge 2018 with SpecQuimica, developing faster and more cost-effective toxicology testing using infrared spectrometry.',
-    longDescription: 'Founded SpecQuimica team at UNIVAP and developed an innovative toxicology identification process using infrared focal spectrometry. Our solution revolutionizes the toxicology market by providing a faster, more cost-effective alternative to traditional gas/liquid chromatography coupled with mass spectrometry detectors. Won 1st place in Embarca category at ITA Challenge 2018, competing against 440+ students across 114 teams from Brazil.',
-    category: 'Entrepreneurship',
+    id: 'hackathon-receita-federal',
+    title: 'EcoVape - Sustainable IoT Solution',
+    description: 'Developed an innovative environmental impact solution at Receita Federal Hackathon, transforming discarded VAPE components into functional IoT devices for sustainability monitoring.',
+    longDescription: 'Participated in the Receita Federal Hackathon where our team tackled electronic waste and environmental sustainability challenges. We engineered an innovative solution that disassembles confiscated/discarded VAPE devices and repurposes their valuable components (batteries, sensors, microcontrollers) to create IoT environmental monitoring devices. Built with ESP32 microcontrollers, Node.js backend services, and Docker containerization, our solution demonstrates how regulatory enforcement can intersect with circular economy principles to create positive environmental impact.',
+    category: 'Hackathon',
     status: 'Completed',
-    timeline: '2018',
-    technologies: ['Infrared Spectrometry', 'Toxicology Testing', 'Analytical Chemistry', 'Medical Technology', 'Business Development', 'Market Research'],
+    timeline: '2024',
+    technologies: ['ESP32', 'Node.js', 'Docker', 'IoT', 'NestJS', 'Prisma', 'TypeScript', 'Containerization', 'Microservices', 'Environmental Tech'],
     outcomes: [
-      '1st place winner in Embarca category among 114 competing teams',
-      'Proposed innovative infrared spectrometry process for toxicology testing',
-      'Proposed faster and more cost-effective alternative to traditional methods',
-      'Successfully validated disruptive technology in competitive market analysis',
+      'Successfully demonstrated VAPE component recovery and repurposing process',
+      'Built working IoT prototype using recycled electronic components',
+      'Created scalable microservices architecture with Docker containerization',
+      'Developed real-time data collection system for environmental monitoring',
+      'Proposed circular economy model for electronic waste from regulatory enforcement'
     ],
     metrics: [
-      { label: 'Competition Rank', value: '1st Place', improvement: 'Embarca category' },
-      { label: 'Teams Competed', value: '114', improvement: 'from across Brazil' },
-      { label: 'Cost Reduction', value: 'Significant', improvement: 'vs traditional methods' },
-      { label: 'Analysis Speed', value: 'Faster', improvement: 'vs chromatography + mass spec' }
+      { label: 'Component Reuse', value: '90%+', improvement: 'of VAPE electronics recycled' },
+      { label: 'System Uptime', value: '99.5%', improvement: 'Docker containerization' },
+      { label: 'Environmental Impact', value: 'Significant', improvement: 'waste reduction achieved' },
+      { label: 'Cost per Device', value: '< $5', improvement: 'using recycled components' }
     ],
     highlights: [
-      'Infrared focal spectrometry method for toxic identification',
-      'Cost-effective alternative to expensive chromatography equipment',
-      'Faster analysis results compared to traditional toxicology methods',
-      'Comprehensive market analysis of toxicology testing industry',
-      'Professional pitch presentation to expert judges'
+      'ESP32-based IoT devices built from recycled VAPE components',
+      'Dockerized microservices architecture for scalability and portability',
+      'NestJS backend with Prisma ORM for efficient data management',
+      'Real-time environmental monitoring and data collection system',
+      'Circular economy approach to regulatory enforcement waste',
+      'Full-stack solution from hardware disassembly to cloud infrastructure'
     ],
     challenges: [
-      'Competing against traditional chromatography-mass spectrometry methods',
-      'Proving accuracy and reliability of infrared spectrometry approach',
-      'Demonstrating market viability for disruptive medical technology',
-      'Balancing innovation with regulatory compliance requirements',
-      'Presenting complex technical solution to diverse audience'
+      'Safely disassembling lithium batteries from VAPE devices',
+      'Identifying and testing reusable components from different VAPE models',
+      'Designing robust firmware for ESP32 with recycled power supplies',
+      'Implementing reliable data transmission from constrained IoT devices',
+      'Containerizing entire solution for reproducible deployment',
+      'Balancing environmental impact metrics with technical feasibility'
     ],
     learnings: [
-      'Importance of understanding incumbent technology limitations',
-      'Value of cost-effectiveness in medical technology adoption',
-      'Critical need for thorough competitive technology analysis',
-      'Significance of speed and efficiency in diagnostic solutions',
-      'Essential role of teamwork in deep-tech innovation',
-      'Importance of translating technical advantages into business value'
+      'Deep understanding of ESP32 capabilities and limitations in IoT applications',
+      'Practical experience with circular economy and e-waste management',
+      'Docker containerization best practices for microservices architecture',
+      'Importance of modular design when working with recycled components',
+      'Value of full-stack thinking from hardware to cloud infrastructure',
+      'Critical role of sustainability in modern technology solutions',
+      'Cross-functional collaboration between hardware and software teams'
     ],
     links: [
-      { type: 'article', url: 'https://www.linkedin.com/posts/guilhermepozo_empreendedorismo-activity-6481111829505417216-vVkk/', label: 'LinkedIn Announcement' },
-      { type: 'demo', url: 'https://www.itachallenge.ita.br/', label: 'ITA Challenge Official Website' },
-      { type: 'article', url: 'https://www.itachallenge.ita.br/edicao-2018/', label: 'Winners Announcement' }
+      { type: 'github', url: 'https://github.com/victrhugo/hackathon-receita-federal', label: 'View Source Code' }
     ]
   }
 ]
