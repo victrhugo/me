@@ -74,10 +74,10 @@ export const metadata: Metadata = {
     siteName: "Victor Hugo",
     images: [
       {
-        url: "/shiva.png",
+        url: "/me.png",
         width: 759,
         height: 845,
-        alt: "Victor Hugo - Tech Lead & SRE",
+        alt: "Victor Hugo - Java Developer",
       },
     ],
   },
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Victor Hugo - Tech Lead, SRE & Cloud Architect",
     description: "Technical Leader specializing in cloud engineering, AI automation, and DevOps excellence. Expert in AWS, Azure, Kubernetes, and AI-powered solutions.",
-    images: ["/shiva.png"],
+    images: ["/me.png"],
     creator: "@victrhugo",
   },
   robots: {
@@ -117,7 +117,7 @@ export default function RootLayout({
     "@type": "Person",
     name: "Victor Hugo",
     url: "https://victrhugo.com",
-    image: "https://victrhugo.com/shiva.png",
+    image: "https://victrhugo.com/me.png",
     jobTitle: "Tech Lead & Site Reliability Engineer",
     worksFor: {
       "@type": "Organization",

@@ -201,7 +201,7 @@ export default function Home() {
                 <Github className="w-5 h-5" />
               </Link>
               <Link
-                href="https://www.linkedin.com/in/victrhugo/"
+                href="https://www.linkedin.com/in/v-ictorh/"
                 className="text-muted-foreground hover:text-cyan transition-all duration-200 transform hover:scale-110 hover:-translate-y-0.5 relative group"
                 aria-label="LinkedIn Profile"
                 title="Connect with me on LinkedIn"
@@ -223,23 +223,23 @@ export default function Home() {
               </div>
               <div className="relative flex items-start gap-3 mt-1">
                 <div className="text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground">Software Engineer</div>
-                <div className="relative group/dog">
+                <div className="relative group/avatar">
                   <div
-                    className="relative w-20 h-20 transition-all duration-300 group-hover/dog:scale-110 cursor-pointer mt-[-6px]"
-                    onClick={() => setSelectedImage({ image: '/shiva.png', title: 'Shiva', description: 'My Blue Heeler dog, one of the site inspirations 🐾' })}
+                    className="relative w-20 h-20 transition-all duration-300 group-hover/avatar:scale-110 cursor-pointer mt-[-6px]"
+                    onClick={() => setSelectedImage({ image: '/me.png', title: 'Victor Hugo', description: 'Java Developer passionate about building scalable applications ☕' })}
                   >
                     <Image
-                      src="/shiva.png"
-                      alt="Shiva"
+                      src="/me.png"
+                      alt="Victor Hugo"
                       width={60}
                       height={60}
-                      className="object-contain"
+                      className="object-contain rounded-full"
                       priority
                     />
                   </div>
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-3 py-1.5 bg-foreground text-background text-xs rounded-lg whitespace-nowrap opacity-0 group-hover/dog:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-3 py-1.5 bg-foreground text-background text-xs rounded-lg whitespace-nowrap opacity-0 group-hover/avatar:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
                     <span className="flex items-center gap-1.5">
-                      🐾 Shiva, my dog, one of the site inspirations
+                      ☕ Victor Hugo - Java Developer
                     </span>
                     <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-1 border-4 border-transparent border-b-foreground"></div>
                   </div>
@@ -285,7 +285,7 @@ export default function Home() {
               <Github className="w-5 h-5" />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/victrhugo/"
+              href="https://www.linkedin.com/in/v-ictorh/"
               className="text-muted-foreground hover:text-cyan transition-all duration-200 transform hover:scale-110 hover:-translate-y-1 hover:rotate-3 relative group"
               aria-label="LinkedIn Profile"
               title="Connect with me on LinkedIn"
@@ -585,7 +585,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Image Modal for Shiva */}
+          {/* Image Modal for Profile */}
           {selectedImage && (
             <ImageModal
               images={[selectedImage.image]}
@@ -661,10 +661,10 @@ export default function Home() {
                   </Link>
                   <span className="text-border">•</span>
                   <button
-                    onClick={() => setSelectedImage({ image: '/shiva.png', title: 'Shiva', description: 'My Blue Heeler dog, one of the site inspirations 🐾' })}
+                    onClick={() => setSelectedImage({ image: '/me.png', title: 'Victor Hugo', description: 'Java Developer passionate about building scalable applications ☕' })}
                     className="hover:text-pink transition-colors inline-flex items-center gap-1 cursor-pointer group"
                   >
-                    Shiva, my Blue Heeler dog 🐾
+                    Built with passion ☕
                   </button>
                 </div>
               </div>
