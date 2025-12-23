@@ -4,118 +4,118 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Dracula color palette - exact colors from specification */
-  /* Background: #282A36 */
-  --background: oklch(0.237 0.019 277);
-  /* Foreground: #F8F8F2 */
-  --foreground: oklch(0.972 0.007 104);
-  /* Card / Selection - slightly lighter than background for visibility */
-  --card: oklch(0.270 0.020 277);
-  --card-foreground: oklch(0.972 0.007 104);
-  --popover: oklch(0.270 0.020 277);
-  --popover-foreground: oklch(0.972 0.007 104);
-  /* Pink: #FF79C6 */
-  --primary: oklch(0.732 0.213 332);
-  --primary-foreground: oklch(0.237 0.019 277);
-  /* Purple: #BD93F9 */
-  --secondary: oklch(0.722 0.177 286);
-  --secondary-foreground: oklch(0.972 0.007 104);
-  /* Muted background - subtle but visible */
-  --muted: oklch(0.280 0.020 277);
-  /* Muted text - significantly lightened for better readability (WCAG AA compliance) */
-  --muted-foreground: oklch(0.720 0.055 266);
-  /* Pink: #FF79C6 */
-  --accent: oklch(0.732 0.213 332);
-  --accent-foreground: oklch(0.237 0.019 277);
-  /* Red: #FF5555 */
-  --destructive: oklch(0.685 0.257 27);
-  --destructive-foreground: oklch(0.972 0.007 104);
-  /* Border - lightened for better visibility */
-  --border: oklch(0.420 0.035 277);
-  --input: oklch(0.420 0.035 277);
-  /* Pink: #FF79C6 */
-  --ring: oklch(0.732 0.213 332);
+  /* 🔥 Neon Fire Theme - Fogo Neon */
+  /* Background: Very Dark Gray/Black #0a0a0a */
+  --background: oklch(0.15 0 0);
+  /* Foreground: Off White #f5f5f5 */
+  --foreground: oklch(0.97 0 0);
+  /* Card - Slightly lighter than background */
+  --card: oklch(0.18 0.01 0);
+  --card-foreground: oklch(0.97 0 0);
+  --popover: oklch(0.18 0.01 0);
+  --popover-foreground: oklch(0.97 0 0);
+  /* Primary: Neon Orange #FF6B00 */
+  --primary: oklch(0.70 0.21 45);
+  --primary-foreground: oklch(0.15 0 0);
+  /* Secondary: Flame Red #FF2E2E */
+  --secondary: oklch(0.65 0.26 25);
+  --secondary-foreground: oklch(0.97 0 0);
+  /* Muted background */
+  --muted: oklch(0.22 0.01 0);
+  /* Muted text - Light gray for readability */
+  --muted-foreground: oklch(0.65 0.02 0);
+  /* Accent: Electric Yellow #FFD60A */
+  --accent: oklch(0.88 0.18 95);
+  --accent-foreground: oklch(0.15 0 0);
+  /* Destructive: Deep Red #E63946 */
+  --destructive: oklch(0.58 0.22 25);
+  --destructive-foreground: oklch(0.97 0 0);
+  /* Borders - Subtle dark gray */
+  --border: oklch(0.30 0.02 0);
+  --input: oklch(0.30 0.02 0);
+  /* Ring: Neon Orange */
+  --ring: oklch(0.70 0.21 45);
   --radius: 0.5rem;
-  --chart-1: oklch(0.732 0.213 332);
-  --chart-2: oklch(0.722 0.177 286);
-  --chart-3: oklch(0.849 0.141 200);
-  --chart-4: oklch(0.826 0.197 156);
-  --chart-5: oklch(0.932 0.147 99);
-  --sidebar: oklch(0.237 0.019 277);
-  --sidebar-foreground: oklch(0.972 0.007 104);
-  --sidebar-primary: oklch(0.732 0.213 332);
-  --sidebar-primary-foreground: oklch(0.972 0.007 104);
-  --sidebar-accent: oklch(0.280 0.020 277);
-  --sidebar-accent-foreground: oklch(0.972 0.007 104);
-  --sidebar-border: oklch(0.420 0.035 277);
-  --sidebar-ring: oklch(0.732 0.213 332);
+  --chart-1: oklch(0.70 0.21 45);
+  --chart-2: oklch(0.65 0.26 25);
+  --chart-3: oklch(0.88 0.18 95);
+  --chart-4: oklch(0.75 0.24 340);
+  --chart-5: oklch(0.82 0.16 75);
+  --sidebar: oklch(0.15 0 0);
+  --sidebar-foreground: oklch(0.97 0 0);
+  --sidebar-primary: oklch(0.70 0.21 45);
+  --sidebar-primary-foreground: oklch(0.97 0 0);
+  --sidebar-accent: oklch(0.22 0.01 0);
+  --sidebar-accent-foreground: oklch(0.97 0 0);
+  --sidebar-border: oklch(0.30 0.02 0);
+  --sidebar-ring: oklch(0.70 0.21 45);
 
-  /* Dracula color tokens - exact hex to OKLCH conversions */
-  --pink: oklch(0.732 0.213 332);      /* #FF79C6 */
-  --purple: oklch(0.722 0.177 286);    /* #BD93F9 */
-  --cyan: oklch(0.849 0.141 200);      /* #8BE9FD */
-  --green: oklch(0.826 0.197 156);     /* #50FA7B */
-  --yellow: oklch(0.932 0.147 99);     /* #F1FA8C */
-  --orange: oklch(0.794 0.151 53);     /* #FFB86C */
-  --red: oklch(0.685 0.257 27);        /* #FF5555 */
-  --comment: oklch(0.750 0.060 266);   /* Comment color - brightened significantly for readability */
+  /* 🔥 Neon Fire color tokens */
+  --pink: oklch(0.75 0.24 340);        /* Magenta Fire #FF1493 */
+  --purple: oklch(0.55 0.20 300);      /* Deep Purple #7B2CBF */
+  --cyan: oklch(0.75 0.15 220);        /* Electric Blue #00D9FF */
+  --green: oklch(0.75 0.18 140);       /* Neon Green #39FF14 */
+  --yellow: oklch(0.88 0.18 95);       /* Electric Yellow #FFD60A */
+  --orange: oklch(0.70 0.21 45);       /* Neon Orange #FF6B00 */
+  --red: oklch(0.65 0.26 25);          /* Flame Red #FF2E2E */
+  --comment: oklch(0.65 0.02 0);       /* Medium Gray for comments */
 }
 
 .dark {
-  /* Dracula color palette - exact colors from specification */
-  /* Background: #282A36 */
-  --background: oklch(0.237 0.019 277);
-  /* Foreground: #F8F8F2 */
-  --foreground: oklch(0.972 0.007 104);
-  /* Card / Selection - slightly lighter than background for visibility */
-  --card: oklch(0.270 0.020 277);
-  --card-foreground: oklch(0.972 0.007 104);
-  --popover: oklch(0.270 0.020 277);
-  --popover-foreground: oklch(0.972 0.007 104);
-  /* Pink: #FF79C6 */
-  --primary: oklch(0.732 0.213 332);
-  --primary-foreground: oklch(0.237 0.019 277);
-  /* Purple: #BD93F9 */
-  --secondary: oklch(0.722 0.177 286);
-  --secondary-foreground: oklch(0.972 0.007 104);
-  /* Muted background - subtle but visible */
-  --muted: oklch(0.280 0.020 277);
-  /* Muted text - significantly lightened for better readability (WCAG AA compliance) */
-  --muted-foreground: oklch(0.720 0.055 266);
-  /* Pink: #FF79C6 */
-  --accent: oklch(0.732 0.213 332);
-  --accent-foreground: oklch(0.237 0.019 277);
-  /* Red: #FF5555 */
-  --destructive: oklch(0.685 0.257 27);
-  --destructive-foreground: oklch(0.972 0.007 104);
-  /* Border - lightened for better visibility */
-  --border: oklch(0.420 0.035 277);
-  --input: oklch(0.420 0.035 277);
-  /* Pink: #FF79C6 */
-  --ring: oklch(0.732 0.213 332);
-  --chart-1: oklch(0.732 0.213 332);
-  --chart-2: oklch(0.722 0.177 286);
-  --chart-3: oklch(0.849 0.141 200);
-  --chart-4: oklch(0.826 0.197 156);
-  --chart-5: oklch(0.932 0.147 99);
-  --sidebar: oklch(0.237 0.019 277);
-  --sidebar-foreground: oklch(0.972 0.007 104);
-  --sidebar-primary: oklch(0.732 0.213 332);
-  --sidebar-primary-foreground: oklch(0.972 0.007 104);
-  --sidebar-accent: oklch(0.280 0.020 277);
-  --sidebar-accent-foreground: oklch(0.972 0.007 104);
-  --sidebar-border: oklch(0.420 0.035 277);
-  --sidebar-ring: oklch(0.732 0.213 332);
+  /* 🔥 Neon Fire Theme - Fogo Neon (Dark Mode) */
+  /* Background: Very Dark Gray/Black #0a0a0a */
+  --background: oklch(0.15 0 0);
+  /* Foreground: Off White #f5f5f5 */
+  --foreground: oklch(0.97 0 0);
+  /* Card - Slightly lighter than background */
+  --card: oklch(0.18 0.01 0);
+  --card-foreground: oklch(0.97 0 0);
+  --popover: oklch(0.18 0.01 0);
+  --popover-foreground: oklch(0.97 0 0);
+  /* Primary: Neon Orange #FF6B00 */
+  --primary: oklch(0.70 0.21 45);
+  --primary-foreground: oklch(0.15 0 0);
+  /* Secondary: Flame Red #FF2E2E */
+  --secondary: oklch(0.65 0.26 25);
+  --secondary-foreground: oklch(0.97 0 0);
+  /* Muted background */
+  --muted: oklch(0.22 0.01 0);
+  /* Muted text - Light gray for readability */
+  --muted-foreground: oklch(0.65 0.02 0);
+  /* Accent: Electric Yellow #FFD60A */
+  --accent: oklch(0.88 0.18 95);
+  --accent-foreground: oklch(0.15 0 0);
+  /* Destructive: Deep Red #E63946 */
+  --destructive: oklch(0.58 0.22 25);
+  --destructive-foreground: oklch(0.97 0 0);
+  /* Borders - Subtle dark gray */
+  --border: oklch(0.30 0.02 0);
+  --input: oklch(0.30 0.02 0);
+  /* Ring: Neon Orange */
+  --ring: oklch(0.70 0.21 45);
+  --chart-1: oklch(0.70 0.21 45);
+  --chart-2: oklch(0.65 0.26 25);
+  --chart-3: oklch(0.88 0.18 95);
+  --chart-4: oklch(0.75 0.24 340);
+  --chart-5: oklch(0.82 0.16 75);
+  --sidebar: oklch(0.15 0 0);
+  --sidebar-foreground: oklch(0.97 0 0);
+  --sidebar-primary: oklch(0.70 0.21 45);
+  --sidebar-primary-foreground: oklch(0.97 0 0);
+  --sidebar-accent: oklch(0.22 0.01 0);
+  --sidebar-accent-foreground: oklch(0.97 0 0);
+  --sidebar-border: oklch(0.30 0.02 0);
+  --sidebar-ring: oklch(0.70 0.21 45);
 
-  /* Dracula color tokens - exact hex to OKLCH conversions */
-  --pink: oklch(0.732 0.213 332);      /* #FF79C6 */
-  --purple: oklch(0.722 0.177 286);    /* #BD93F9 */
-  --cyan: oklch(0.849 0.141 200);      /* #8BE9FD */
-  --green: oklch(0.826 0.197 156);     /* #50FA7B */
-  --yellow: oklch(0.932 0.147 99);     /* #F1FA8C */
-  --orange: oklch(0.794 0.151 53);     /* #FFB86C */
-  --red: oklch(0.685 0.257 27);        /* #FF5555 */
-  --comment: oklch(0.750 0.060 266);   /* Comment color - brightened significantly for readability */
+  /* 🔥 Neon Fire color tokens */
+  --pink: oklch(0.75 0.24 340);        /* Magenta Fire #FF1493 */
+  --purple: oklch(0.55 0.20 300);      /* Deep Purple #7B2CBF */
+  --cyan: oklch(0.75 0.15 220);        /* Electric Blue #00D9FF */
+  --green: oklch(0.75 0.18 140);       /* Neon Green #39FF14 */
+  --yellow: oklch(0.88 0.18 95);       /* Electric Yellow #FFD60A */
+  --orange: oklch(0.70 0.21 45);       /* Neon Orange #FF6B00 */
+  --red: oklch(0.65 0.26 25);          /* Flame Red #FF2E2E */
+  --comment: oklch(0.65 0.02 0);       /* Medium Gray for comments */
 }
 
 @theme inline {
@@ -205,16 +205,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: oklch(0.237 0.019 277); /* Background: #282A36 */
+    background: oklch(0.15 0 0); /* Neon Fire Background */
   }
 
   ::-webkit-scrollbar-thumb {
-    background: oklch(0.327 0.022 277); /* Current Line: #44475A */
+    background: oklch(0.30 0.02 0); /* Dark Gray */
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: oklch(0.510 0.065 266); /* Comment: #6272A4 */
+    background: oklch(0.70 0.21 45); /* Neon Orange */
   }
 }
 
@@ -272,9 +272,9 @@
     border: 1px solid rgba(255, 255, 255, 0.125);
   }
 
-  /* Gradient text */
+  /* Gradient text - Neon Fire */
   .gradient-text {
-    background: linear-gradient(135deg, var(--pink), var(--purple), var(--cyan));
+    background: linear-gradient(135deg, var(--orange), var(--red), var(--yellow));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
