@@ -27,7 +27,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'hackathon-receita-federal',
-    title: 'EcoVape - Sustainable IoT Solution',
+    title: 'Simpli.fy - Sustainable IoT Solution',
     description: 'Developed an innovative environmental impact solution at Receita Federal Hackathon, transforming discarded VAPE components into functional IoT devices for sustainability monitoring.',
     longDescription: 'Participated in the Receita Federal Hackathon where our team tackled electronic waste and environmental sustainability challenges. We engineered an innovative solution that disassembles confiscated/discarded VAPE devices and repurposes their valuable components (batteries, sensors, microcontrollers) to create IoT environmental monitoring devices. Built with ESP32 microcontrollers, Node.js backend services, and Docker containerization, our solution demonstrates how regulatory enforcement can intersect with circular economy principles to create positive environmental impact.',
     category: 'Hackathon',

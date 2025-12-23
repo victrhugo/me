@@ -3,26 +3,15 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowUpRight, Github, Linkedin, Mail, Clock, Calendar, MapPin, Play, Image as ImageIcon } from "lucide-react"
+import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react"
 import { CommandPalette } from "@/components/command-palette"
 import { ProjectCard } from "@/components/project-card"
 import { ImageModal } from "@/components/image-modal"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
 import { getFeaturedProjects } from "@/data/projects"
-import { getFeaturedArticles } from "@/data/articles"
-import { getFeaturedTalks, getAllTalks } from "@/data/talks"
 import { getAllExperiences, getExperienceYears } from "@/data/experience"
 
 export default function Home() {
   const [expandedExperiences, setExpandedExperiences] = useState<Set<string>>(new Set())
-  const [expandedTalks, setExpandedTalks] = useState<Set<string>>(new Set())
-  const [selectedTalk, setSelectedTalk] = useState<{ image: string; title: string; event: string } | null>(null)
   const [selectedImage, setSelectedImage] = useState<{ image: string; title: string; description: string } | null>(null)
   const [activeSection, setActiveSection] = useState<string>('now')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -40,7 +29,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['now', 'about', 'experience', 'projects', 'writing', 'speaking']
+      const sections = ['now', 'about', 'experience', 'projects']
       const scrollPosition = window.scrollY + 100 // Offset for better detection
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -75,7 +64,7 @@ export default function Home() {
       }
     )
 
-    const sections = ['now', 'about', 'experience', 'projects', 'writing', 'speaking']
+    const sections = ['now', 'about', 'experience', 'projects']
     sections.forEach((sectionId) => {
       const element = document.getElementById(sectionId)
       if (element) observer.observe(element)
@@ -126,21 +115,7 @@ export default function Home() {
     })
   }
 
-  const toggleTalk = (id: string) => {
-    setExpandedTalks(prev => {
-      const newSet = new Set(prev)
-      if (newSet.has(id)) {
-        newSet.delete(id)
-      } else {
-        newSet.add(id)
-      }
-      return newSet
-    })
-  }
-
   const featuredProjects = getFeaturedProjects()
-  const featuredArticles = getFeaturedArticles()
-  const featuredTalks = getAllTalks()
   const experiences = getAllExperiences()
   const yearsOfExperience = getExperienceYears()
 
@@ -193,8 +168,6 @@ export default function Home() {
               { href: '#about', label: 'About', activeClass: 'text-cyan bg-cyan/10', hoverClass: 'hover:text-cyan hover:bg-cyan/5', barClass: 'bg-cyan', delay: '100ms' },
               { href: '#experience', label: 'Experience', activeClass: 'text-purple bg-purple/10', hoverClass: 'hover:text-purple hover:bg-purple/5', barClass: 'bg-purple', delay: '150ms' },
               { href: '#projects', label: 'Projects', activeClass: 'text-green bg-green/10', hoverClass: 'hover:text-green hover:bg-green/5', barClass: 'bg-green', delay: '200ms' },
-              { href: '#writing', label: 'Writing', activeClass: 'text-orange bg-orange/10', hoverClass: 'hover:text-orange hover:bg-orange/5', barClass: 'bg-orange', delay: '250ms' },
-              { href: '#speaking', label: 'Speaking', activeClass: 'text-pink bg-pink/10', hoverClass: 'hover:text-pink hover:bg-pink/5', barClass: 'bg-pink', delay: '300ms' },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -280,8 +253,6 @@ export default function Home() {
                 { href: '#about', label: 'About', activeClass: 'text-cyan bg-cyan/10', hoverClass: 'hover:text-cyan hover:bg-cyan/5', barClass: 'bg-cyan', delay: '150ms' },
                 { href: '#experience', label: 'Experience', activeClass: 'text-purple bg-purple/10', hoverClass: 'hover:text-purple hover:bg-purple/5', barClass: 'bg-purple', delay: '200ms' },
                 { href: '#projects', label: 'Projects', activeClass: 'text-green bg-green/10', hoverClass: 'hover:text-green hover:bg-green/5', barClass: 'bg-green', delay: '250ms' },
-                { href: '#writing', label: 'Writing', activeClass: 'text-orange bg-orange/10', hoverClass: 'hover:text-orange hover:bg-orange/5', barClass: 'bg-orange', delay: '300ms' },
-                { href: '#speaking', label: 'Speaking', activeClass: 'text-pink bg-pink/10', hoverClass: 'hover:text-pink hover:bg-pink/5', barClass: 'bg-pink', delay: '350ms' },
               ].map((item) => (
                 <Link
                   key={item.href}
@@ -616,239 +587,19 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Writing Section */}
-          <section id="writing" className="px-4 sm:px-8 lg:px-16 py-16 lg:py-20 border-t border-border">
-            <div className="max-w-4xl">
-              <h2 className={`text-sm uppercase tracking-wider mb-8 lg:mb-12 transition-colors ${visibleSections.has('writing') ? 'animate-fade-up' : 'opacity-0'} ${activeSection === 'writing' ? 'text-orange' : 'text-muted-foreground'}`}>Writing</h2>
+          {/* Image Modal for Shiva */}
+          {selectedImage && (
+            <ImageModal
+              images={[selectedImage.image]}
+              title={selectedImage.title}
+              description={selectedImage.description}
+              isOpen={!!selectedImage}
+              onClose={() => setSelectedImage(null)}
+            />
+          )}
 
-              <div className="space-y-8">
-                {featuredArticles.map((article, index) => {
-                  // Map article IDs to their external URLs
-                  const externalLinks: Record<string, string> = {
-                    'gaming-blog-career-foundation': 'https://www.linkedin.com/pulse/how-15-year-olds-gaming-blog-became-foundation-my-career-pozo-mgztf',
-                    'architectural-decision-analytics-platform': 'https://www.linkedin.com/pulse/architectural-decision-analytics-platform-guilherme-pozo',
-                    'introduction-to-blockchain': 'https://medium.com/@guilhermepozoti/introdu%C3%A7%C3%A3o-ao-blockchain-408ef2e750d4'
-                  }
-
-                  const isExternalLink = article.id in externalLinks
-                  const articleHref = isExternalLink
-                    ? externalLinks[article.id]
-                    : `/blog/${article.slug}`
-
-                  return (
-                    <Link
-                      key={article.id}
-                      href={articleHref}
-                      target={isExternalLink ? "_blank" : undefined}
-                      rel={isExternalLink ? "noopener noreferrer" : undefined}
-                      className={`group relative block p-4 sm:p-6 border border-border rounded-lg transition-all duration-300 cursor-pointer hover:border-orange/50 hover:scale-[1.01] ${visibleSections.has('writing') ? `animate-fade-up animate-delay-${(index + 1) * 100}` : 'opacity-0'}`}
-                    >
-                      {/* Click indicator badge - mobile only */}
-                      <div className="absolute top-2 right-2 sm:hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="flex items-center gap-1 px-2 py-1 bg-orange/10 text-orange rounded-full text-xs">
-                          <ArrowUpRight className="w-3 h-3" />
-                        </div>
-                      </div>
-                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-3">
-                        <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-2 flex-wrap">
-                            <span className="px-2 py-1 bg-orange/10 text-orange rounded-full text-xs whitespace-nowrap">
-                              {article.category}
-                            </span>
-                            <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                              <Clock className="w-3 h-3" />
-                              {article.readTime} min read
-                            </div>
-                          </div>
-                          <h3 className="text-lg font-medium text-foreground group-hover:text-orange transition-colors mb-2">
-                            {article.title}
-                          </h3>
-                          <p className="text-comment text-sm leading-relaxed">
-                            {article.description}
-                          </p>
-                        </div>
-                        <div className="flex sm:flex-col items-center sm:items-end gap-2 sm:gap-0 sm:ml-6">
-                          <span className="text-sm text-muted-foreground sm:mb-2">
-                            {new Date(article.publishedAt).getFullYear()}
-                          </span>
-                          <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-orange transition-colors" />
-                        </div>
-                      </div>
-                      <div className="flex flex-wrap gap-2 mt-3">
-                        {article.tags.slice(0, 4).map((tag, tagIndex) => (
-                          <span key={tagIndex} className="text-xs text-muted-foreground">
-                            {tag}{tagIndex < Math.min(article.tags.length, 4) - 1 && <span className="mx-1">•</span>}
-                          </span>
-                        ))}
-                      </div>
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
-          </section>
-
-          {/* Speaking Section */}
-          <section id="speaking" className="px-4 sm:px-8 lg:px-16 py-16 lg:py-20 border-t border-border">
-            <div className="max-w-5xl">
-              <h2 className={`text-sm uppercase tracking-wider mb-8 lg:mb-12 transition-colors ${visibleSections.has('speaking') ? 'animate-fade-up' : 'opacity-0'} ${activeSection === 'speaking' ? 'text-pink' : 'text-muted-foreground'}`}>Speaking & Workshops</h2>
-
-              {/* Image Modal for Talks */}
-              {selectedTalk && (
-                <ImageModal
-                  images={[selectedTalk.image]}
-                  title={selectedTalk.title}
-                  description={selectedTalk.event}
-                  isOpen={!!selectedTalk}
-                  onClose={() => setSelectedTalk(null)}
-                />
-              )}
-
-              {/* Image Modal for Shiva */}
-              {selectedImage && (
-                <ImageModal
-                  images={[selectedImage.image]}
-                  title={selectedImage.title}
-                  description={selectedImage.description}
-                  isOpen={!!selectedImage}
-                  onClose={() => setSelectedImage(null)}
-                />
-              )}
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-                {featuredTalks.map((talk, index) => {
-                  const talkTypeColor = talk.type === 'Conference' ? 'purple' : talk.type === 'Workshop' ? 'green' : 'cyan'
-                  const talkTypeBg = talk.type === 'Conference' ? 'bg-purple/10' : talk.type === 'Workshop' ? 'bg-green/10' : 'bg-cyan/10'
-                  const talkTypeText = talk.type === 'Conference' ? 'text-purple' : talk.type === 'Workshop' ? 'text-green' : 'text-cyan'
-
-                  // Determine primary action for card click
-                  const handleCardClick = () => {
-                    if (talk.recording) {
-                      window.open(talk.recording, '_blank', 'noopener,noreferrer')
-                    } else if (talk.slides) {
-                      window.open(talk.slides, '_blank', 'noopener,noreferrer')
-                    } else if (talk.image) {
-                      setSelectedTalk({ image: talk.image!, title: talk.title, event: talk.event })
-                    }
-                  }
-
-                  return (
-                  <div
-                    key={talk.id}
-                    onClick={handleCardClick}
-                    className={`group relative border border-border rounded-lg overflow-hidden transition-all duration-300 cursor-pointer hover:border-pink/50 hover:scale-[1.01] h-full flex flex-col ${visibleSections.has('speaking') ? `animate-fade-up animate-delay-${(index + 1) * 100}` : 'opacity-0'}`}
-                  >
-
-                    {/* Talk card content */}
-                    <div className="p-4 lg:p-6 flex-1 flex flex-col">
-                      <div className="flex-1">
-                        <div className="flex items-start justify-between mb-4">
-                          <div className="flex items-center gap-2">
-                            <span className={`px-2 py-1 ${talkTypeBg} ${talkTypeText} rounded-full text-xs whitespace-nowrap transition-all duration-300 group-hover:scale-110`}>
-                              {talk.type}
-                            </span>
-                          </div>
-                          <div className="flex gap-2 flex-shrink-0">
-                            {talk.slides && (
-                              <Link
-                                href={talk.slides}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-2 rounded-lg bg-muted/10 text-muted-foreground hover:bg-pink/10 hover:text-pink transition-all duration-200 hover:scale-110 cursor-pointer"
-                                aria-label="View slides"
-                                onClick={(e) => e.stopPropagation()}
-                              >
-                                <ArrowUpRight className="w-4 h-4" />
-                              </Link>
-                            )}
-                            {talk.recording && (
-                              <Link
-                                href={talk.recording}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-2 rounded-lg bg-muted/10 text-muted-foreground hover:bg-pink/10 hover:text-pink transition-all duration-200 hover:scale-110 cursor-pointer"
-                                aria-label="Watch recording"
-                                onClick={(e) => e.stopPropagation()}
-                              >
-                                <Play className="w-4 h-4" />
-                              </Link>
-                            )}
-                            {talk.image && !talk.recording && (
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation()
-                                  setSelectedTalk({ image: talk.image!, title: talk.title, event: talk.event })
-                                }}
-                                className="p-2 rounded-lg bg-muted/10 text-muted-foreground hover:bg-pink/10 hover:text-pink transition-all duration-200 hover:scale-110 cursor-pointer"
-                                aria-label="View talk image"
-                              >
-                                <ImageIcon className="w-4 h-4" />
-                              </button>
-                            )}
-                          </div>
-                        </div>
-
-                        <h3 className="text-lg font-semibold text-foreground group-hover:text-pink transition-colors mb-2">
-                          {talk.title}
-                        </h3>
-
-                        <p className="text-comment text-sm leading-relaxed mb-4">
-                          {talk.description}
-                        </p>
-
-                        <div className="space-y-2 mb-4">
-                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                            <Calendar className="w-3 h-3 flex-shrink-0" />
-                            <span className="truncate">
-                              {new Date(talk.date).toLocaleDateString('en-US', {
-                                year: 'numeric',
-                                month: 'long',
-                                day: 'numeric'
-                              })}
-                            </span>
-                          </div>
-                          <div className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <MapPin className="w-3 h-3 flex-shrink-0 mt-0.5" />
-                            <span className="text-left">
-                              {talk.event} • {talk.venue}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="flex flex-wrap gap-1 lg:gap-2 mt-auto">
-                        {(expandedTalks.has(talk.id)
-                          ? talk.technologies
-                          : talk.technologies.slice(0, 3)
-                        ).map((tech, techIndex) => (
-                          <span key={techIndex} className="text-xs text-muted-foreground">
-                            {tech}{techIndex < (expandedTalks.has(talk.id) ? talk.technologies.length : Math.min(talk.technologies.length, 3)) - 1 && <span className="mx-1">•</span>}
-                          </span>
-                        ))}
-                        {talk.technologies.length > 3 && (
-                          <button
-                            onClick={() => toggleTalk(talk.id)}
-                            className="text-xs text-muted-foreground hover:text-pink transition-colors cursor-pointer underline decoration-dotted"
-                          >
-                            {expandedTalks.has(talk.id)
-                              ? 'show less'
-                              : `+${talk.technologies.length - 3} more`
-                            }
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )})}
-              </div>
-
-              {/* <div className="text-center mt-12">
-                <Link href="/speaking" className="btn-secondary">
-                  View All Talks
-                </Link>
-              </div> */}
-            </div>
-          </section>
+          {/* Contact Section */}
+          {/* <section id="contact" className="px-4 sm:px-8 lg:px-16 py-16 lg:py-20 border-t border-border">
 
           {/* Contact Section */}
           {/* <section id="contact" className="px-4 sm:px-8 lg:px-16 py-16 lg:py-20 border-t border-border">
