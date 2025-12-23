@@ -128,7 +128,7 @@ export default function Home() {
         <div className="flex items-center justify-between p-4">
           <Link href="/" className="flex items-center gap-3 animate-fade-in">
             <div className="text-lg font-bold">
-              Guilherme <span className="gradient-text">Pozo</span>
+              Victor <span className="gradient-text">Hugo</span>
             </div>
           </Link>
 
@@ -193,7 +193,7 @@ export default function Home() {
               style={{ transitionDelay: mobileMenuOpen ? '350ms' : '0ms' }}
             >
               <Link
-                href="https://github.com/guilhermepozo"
+                href="https://github.com/victrhugo"
                 className="text-muted-foreground hover:text-purple transition-all duration-200 transform hover:scale-110 hover:-translate-y-0.5 relative group"
                 aria-label="GitHub Profile"
                 title="Visit my GitHub profile"
@@ -201,7 +201,7 @@ export default function Home() {
                 <Github className="w-5 h-5" />
               </Link>
               <Link
-                href="https://www.linkedin.com/in/guilhermepozo/"
+                href="https://www.linkedin.com/in/victrhugo/"
                 className="text-muted-foreground hover:text-cyan transition-all duration-200 transform hover:scale-110 hover:-translate-y-0.5 relative group"
                 aria-label="LinkedIn Profile"
                 title="Connect with me on LinkedIn"
@@ -219,7 +219,7 @@ export default function Home() {
           <div>
             <Link href="/" className="block mb-16 animate-fade-in group">
               <div className="text-2xl font-bold transform transition-all duration-200 hover:scale-105">
-                Guilherme <span className="gradient-text">Pozo</span>
+                Victor <span className="gradient-text">Hugo</span>
               </div>
               <div className="relative flex items-start gap-3 mt-1">
                 <div className="text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground">Software Engineer</div>
@@ -277,7 +277,7 @@ export default function Home() {
 
           <div className="flex gap-4 animate-fade-in animate-delay-400">
             <Link
-              href="https://github.com/guilhermepozo"
+              href="https://github.com/victrhugo"
               className="text-muted-foreground hover:text-purple transition-all duration-200 transform hover:scale-110 hover:-translate-y-1 hover:rotate-3 relative group"
               aria-label="GitHub Profile"
               title="Visit my GitHub profile"
@@ -285,7 +285,7 @@ export default function Home() {
               <Github className="w-5 h-5" />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/guilhermepozo/"
+              href="https://www.linkedin.com/in/victrhugo/"
               className="text-muted-foreground hover:text-cyan transition-all duration-200 transform hover:scale-110 hover:-translate-y-1 hover:rotate-3 relative group"
               aria-label="LinkedIn Profile"
               title="Connect with me on LinkedIn"
@@ -300,14 +300,14 @@ export default function Home() {
           {/* Hero Section */}
           <section id="now" className="min-h-screen flex items-center px-4 sm:px-8 lg:px-16 py-20">
             <div className="max-w-3xl animate-fade-up">
-              <div className="text-sm text-yellow mb-4 animate-fade-in animate-delay-100">Hey there, I'm Pozo</div>
+              <div className="text-sm text-yellow mb-4 animate-fade-in animate-delay-100">Hey there, I'm Victor</div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 lg:mb-8 leading-tight text-balance animate-fade-up animate-delay-200">
-                Building <span className="gradient-text">scalable cloud applications</span> and AI-powered solutions
+                Building <span className="gradient-text">enterprise Java applications</span> and modern web solutions
               </h1>
               <p className="text-lg lg:text-xl text-comment leading-relaxed mb-6 lg:mb-8 animate-fade-up animate-delay-300">
-                Currently leading Digital & Full Stack LATAM at <Link href="https://www.jnj.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Johnson & Johnson <ArrowUpRight className="w-4 h-4" /></Link>,
-                where I architect cloud solutions, drive DevOps excellence, and pioneer AI/Agentic automation across the
-                software development lifecycle.
+                Currently working as Software Developer Intern at <Link href="https://www.gft.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">GFT Technologies <ArrowUpRight className="w-4 h-4" /></Link>,
+                where I develop robust microservices using Spring, Angular, and modern cloud technologies,
+                gaining hands-on experience with enterprise-grade systems and distributed architectures.
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 animate-fade-up animate-delay-400">
                 <Link href="#experience" className="btn-primary text-center">
@@ -364,20 +364,18 @@ export default function Home() {
             <div className="max-w-3xl">
               <h2 className={`text-sm uppercase tracking-wider mb-6 lg:mb-8 transition-colors ${visibleSections.has('about') ? 'animate-fade-up' : 'opacity-0'} ${activeSection === 'about' ? 'text-cyan' : 'text-muted-foreground'}`}>About</h2>
               <p className={`text-base lg:text-lg text-comment leading-relaxed mb-4 lg:mb-6 ${visibleSections.has('about') ? 'animate-fade-up animate-delay-100' : 'opacity-0'}`}>
-                I'm a Software Architect who thrives on bridging the gap between complex technical challenges and real business impact.
-                My world spans from architecting <span className="text-purple">cloud infrastructure</span> (AWS, Azure and GCP) and leading engineering teams,
-                to hands-on coding of <span className="text-green">intuitive frontend experiences</span> and robust
-                 <span className="text-orange"> backend systems</span>. I believe the best solutions come from understanding the entire stack, and <span className="text-pink">the people</span> who build it.
+                I'm a passionate <span className="text-orange">Java Developer</span> who loves building <span className="text-purple">scalable backend systems</span> and <span className="text-cyan">modern web applications</span>.
+                My journey in tech started with <span className="text-green">IT support</span>, where I learned the importance of understanding user needs and system reliability.
+                Now, I'm diving deep into <span className="text-pink">enterprise software development</span>, working with cutting-edge technologies like <span className="text-orange">Spring Framework</span>, <span className="text-cyan">microservices</span>, and <span className="text-purple">event-driven architectures</span>.
               </p>
               <p className={`text-base lg:text-lg text-comment leading-relaxed mb-4 lg:mb-6 ${visibleSections.has('about') ? 'animate-fade-up animate-delay-200' : 'opacity-0'}`}>
-                I'm working with teams across the <span className="text-cyan">Globe</span>, showing them how <span className="text-orange">AI agents</span> and <span className="text-purple">LLMs</span> can transform the way we build software, making it
-                not just <span className="text-green">faster</span>, but genuinely more <span className="text-yellow">enjoyable</span> and <span className="text-pink">efficient</span>, delivering <span className="text-foreground font-medium">real value to the business</span>. You'll often find me experimenting technologies like <span className="text-cyan">Langflow</span>, <span className="text-purple">LangGraph</span>, and <span className="text-orange">LangChain</span>,
-                taking those <span className="text-green">"what if we could..."</span> conversations and actually <span className="text-foreground font-medium">making them happen</span>.
+                Currently at <span className="text-foreground font-medium">GFT Technologies</span>, I'm gaining hands-on experience with <span className="text-orange">Spring Boot</span>, <span className="text-cyan">Angular</span>, <span className="text-purple">Docker</span>, and <span className="text-green">distributed messaging systems</span> like <span className="text-yellow">Kafka</span> and <span className="text-pink">RabbitMQ</span>.
+                I'm fascinated by how <span className="text-cyan">microservices architectures</span> and <span className="text-orange">observability tools</span> like <span className="text-green">Prometheus</span> and <span className="text-yellow">Grafana</span> come together to build robust, production-grade systems.
               </p>
               <p className={`text-base lg:text-lg text-comment leading-relaxed ${visibleSections.has('about') ? 'animate-fade-up animate-delay-300' : 'opacity-0'}`}>
-                I call <span className="text-foreground">São José dos Campos, Brazil</span> home, and I've been
-                fortunate to work with amazing teams at places like <span className="text-foreground">Johnson & Johnson</span>, <span className="text-foreground">Embraer</span>, and <span className="text-foreground">Ambev</span>, plus some
-                really cool startups like <span className="text-foreground">Quero Educação</span>. What drives me is making developers' lives easier and building systems that can actually scale.
+                Based in <span className="text-foreground">Brazil</span>, I'm constantly learning and growing as a developer.
+                My experience spans from providing <span className="text-cyan">technical support</span> at educational institutions to now building <span className="text-purple">enterprise-grade applications</span>.
+                What excites me most is solving complex problems, learning new technologies, and contributing to projects that make a real impact.
               </p>
             </div>
           </section>
@@ -636,7 +634,7 @@ export default function Home() {
           <footer className="px-4 sm:px-8 lg:px-16 py-8 lg:py-12 border-t border-border">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-sm text-muted-foreground">
-                <div>© 2025 Guilherme Pozo. All rights reserved.</div>
+                <div>© 2025 Victor Hugo. All rights reserved.</div>
                 <div>Designed & built with care in Brazil 🇧🇷</div>
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs text-muted-foreground">

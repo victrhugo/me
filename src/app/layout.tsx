@@ -7,14 +7,14 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://guilhermepozo.com"),
+  metadataBase: new URL("https://victrhugo.com"),
   title: {
-    default: "Guilherme Pozo - Tech Lead, SRE & Cloud Architect",
-    template: "%s | Guilherme Pozo"
+    default: "Victor Hugo - Tech Lead, SRE & Cloud Architect",
+    template: "%s | Victor Hugo"
   },
   description: "Technical Leader specializing in cloud engineering, AI automation, and DevOps excellence. Currently at Johnson & Johnson leading Digital & Full Stack LATAM. Expert in AWS, Azure, Kubernetes, and AI-powered solutions.",
   keywords: [
-    "Guilherme Pozo",
+    "Victor Hugo",
     "Software Engineer",
     "Site Reliability Engineer",
     "SRE",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     "Langflow",
     "LangGraph"
   ],
-  authors: [{ name: "Guilherme Pozo", url: "https://guilhermepozo.com" }],
-  creator: "Guilherme Pozo",
-  publisher: "Guilherme Pozo",
+  authors: [{ name: "Victor Hugo", url: "https://victrhugo.com" }],
+  creator: "Victor Hugo",
+  publisher: "Victor Hugo",
   formatDetection: {
     email: false,
     address: false,
@@ -68,25 +68,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://guilhermepozo.com",
-    title: "Guilherme Pozo - Tech Lead, SRE & Cloud Architect",
+    url: "https://victrhugo.com",
+    title: "Victor Hugo - Tech Lead, SRE & Cloud Architect",
     description: "Technical Leader specializing in cloud engineering, AI automation, and DevOps excellence. Expert in AWS, Azure, Kubernetes, and AI-powered solutions.",
-    siteName: "Guilherme Pozo",
+    siteName: "Victor Hugo",
     images: [
       {
         url: "/shiva.png",
         width: 759,
         height: 845,
-        alt: "Guilherme Pozo - Tech Lead & SRE",
+        alt: "Victor Hugo - Tech Lead & SRE",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guilherme Pozo - Tech Lead, SRE & Cloud Architect",
+    title: "Victor Hugo - Tech Lead, SRE & Cloud Architect",
     description: "Technical Leader specializing in cloud engineering, AI automation, and DevOps excellence. Expert in AWS, Azure, Kubernetes, and AI-powered solutions.",
     images: ["/shiva.png"],
-    creator: "@guilhermepozo",
+    creator: "@victrhugo",
   },
   robots: {
     index: true,
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://guilhermepozo.com",
+    canonical: "https://victrhugo.com",
   },
   category: "technology",
 }
@@ -115,9 +115,9 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Guilherme Pozo",
-    url: "https://guilhermepozo.com",
-    image: "https://guilhermepozo.com/shiva.png",
+    name: "Victor Hugo",
+    url: "https://victrhugo.com",
+    image: "https://victrhugo.com/shiva.png",
     jobTitle: "Tech Lead & Site Reliability Engineer",
     worksFor: {
       "@type": "Organization",
@@ -125,8 +125,8 @@ export default function RootLayout({
     },
     description: "Technical Leader specializing in cloud engineering, AI automation, and DevOps excellence. Expert in AWS, Azure, Kubernetes, and AI-powered solutions.",
     sameAs: [
-      "https://github.com/guilhermepozo",
-      "https://www.linkedin.com/in/guilhermepozo/",
+      "https://github.com/victrhugo",
+      "https://www.linkedin.com/in/victrhugo/",
     ],
     knowsAbout: [
       "Cloud Engineering",

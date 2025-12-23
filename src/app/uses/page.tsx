@@ -3,7 +3,7 @@ import { ArrowUpRight, Star, ExternalLink } from "lucide-react"
 import { getAllCategories } from "@/data/uses"
 
 export const metadata = {
-  title: "Uses - Guilherme Pozo",
+  title: "Uses - Victor Hugo",
   description: "Tools, software, and hardware I use for development, productivity, and daily work.",
 }
 
