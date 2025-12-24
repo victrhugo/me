@@ -6,7 +6,7 @@ Allow: /
 Crawl-delay: 0
 
 # Sitemap location
-Sitemap: https://guilhermepozo.com/sitemap.xml
+Sitemap: https://victrhugo.com/sitemap.xml
 
 # Disallow sensitive or private areas (if any)
 # Disallow: /api/

@@ -73,7 +73,7 @@ export function CommandPalette() {
   }
 
   const viewSource = () => {
-    window.open("https://github.com/guilhermepozo", "_blank")
+    window.open("https://github.com/victrhugo", "_blank")
     setOpen(false)
   }
 
