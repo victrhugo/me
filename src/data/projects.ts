@@ -26,6 +26,42 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'los-santos-ecommerce',
+    title: 'Los Santos — E-commerce Store',
+    description: 'Developed a full e-commerce storefront for a retail brand, featuring product catalog, shopping cart, and a seamless checkout experience.',
+    longDescription: 'Built a complete e-commerce solution for Los Santos, a retail brand launching online in 2026. The project covers the full shopping experience: product listing with filtering, individual product pages, cart management, and checkout flow. The site was designed with performance and conversion in mind — fast load times, mobile-first layout, and a clean UI that reflects the brand identity.',
+    category: 'Frontend',
+    status: 'Completed',
+    timeline: '2026',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'E-commerce'],
+    outcomes: [
+      'Delivered a fully functional e-commerce storefront for a real client',
+      'Implemented responsive, mobile-first design for all device sizes',
+      'Built product catalog with filtering and search capabilities',
+      'Created smooth checkout flow focused on conversion',
+    ],
+    highlights: [
+      'Full product catalog with categories and filtering',
+      'Shopping cart with persistent state management',
+      'Mobile-first responsive design',
+      'Optimized performance for fast page loads',
+      'Clean brand-aligned UI/UX',
+    ],
+    challenges: [
+      'Translating brand identity into a cohesive digital experience',
+      'Ensuring a smooth and intuitive checkout flow to minimize drop-off',
+      'Optimizing images and assets for fast load times on mobile',
+    ],
+    learnings: [
+      'Practical experience delivering a production project for a real client',
+      'Deeper understanding of e-commerce UX patterns and conversion optimization',
+      'Importance of performance budgeting in retail contexts',
+    ],
+    links: [
+      { type: 'demo', url: 'https://www.los-santos.store/', label: 'Visit Store' }
+    ]
+  },
+  {
     id: 'hackathon-receita-federal',
     title: 'Simpli.fy - Sustainable IoT Solution',
     description: 'Developed an innovative environmental impact solution at Receita Federal Hackathon, transforming discarded VAPE components into functional IoT devices for sustainability monitoring.',

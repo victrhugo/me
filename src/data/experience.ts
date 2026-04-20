@@ -14,12 +14,38 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: 'gft-bv-software-architect',
+    title: 'Software Architecture Intern — Banco BV',
+    company: { name: 'GFT Technologies', link: 'https://www.gft.com/' },
+    location: 'Brazil',
+    startDate: '2026-02',
+    current: true,
+    type: 'Internship',
+    description: [
+      'Allocated at Banco BV through GFT Technologies, contributing to the Software Architecture team in one of Brazil\'s largest digital banks — supporting architectural governance and technical documentation initiatives across engineering squads.',
+      'Authoring and reviewing Architecture Decision Records (ADRs), capturing design rationale, trade-offs, and constraints for critical system choices that shape long-term platform direction.',
+      'Producing solution architecture documents for new features and integrations, translating business requirements into structured technical specifications consumed by development teams.',
+      'Mapping and documenting existing system landscapes — identifying integration patterns, data flows, and service dependencies to maintain an accurate picture of the current-state architecture.',
+      'Supporting the definition and enforcement of architectural standards and best practices, contributing to internal guidelines that promote consistency and scalability across microservices.',
+      'Participating in architecture review sessions and design critiques, providing structured feedback on technical proposals and ensuring alignment with established patterns and non-functional requirements.',
+      'Collaborating cross-functionally with engineering leads, product managers, and security teams to ensure architecture documentation reflects real constraints and organizational goals.',
+    ],
+    achievements: [
+      'Contributing to architectural governance at one of Brazil\'s leading digital banks',
+      'Building expertise in enterprise architecture documentation and ADR practices',
+      'Supporting architectural alignment across multiple squads through structured documentation',
+      'Developing a deep understanding of large-scale distributed systems in the financial sector',
+    ],
+    technologies: ['Software Architecture', 'ADR', 'C4 Model', 'Microservices', 'API Design', 'Technical Documentation', 'Architecture Governance', 'System Design', 'Integration Patterns', 'Cloud Architecture'],
+  },
+  {
     id: 'gft-java-intern',
     title: 'Software Developer Intern - Java',
     company: { name: 'GFT Technologies', link: 'https://www.gft.com/' },
     location: 'Brazil',
     startDate: '2025-10',
-    current: true,
+    endDate: '2026-01',
+    current: false,
     type: 'Internship',
     description: [
       'Contributing to enterprise-grade Java application development within a dynamic Agile environment, gaining hands-on experience with modern backend technologies and cloud-native architectures.',
