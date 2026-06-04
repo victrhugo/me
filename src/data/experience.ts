@@ -14,57 +14,25 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    id: 'gft-bv-software-architect',
-    title: 'Software Architecture Intern — Banco BV',
-    company: { name: 'GFT Technologies', link: 'https://www.gft.com/' },
-    location: 'Brazil',
-    startDate: '2026-02',
-    current: true,
-    type: 'Internship',
-    description: [
-      'Allocated at Banco BV through GFT Technologies, contributing to the Software Architecture team in one of Brazil\'s largest digital banks — supporting architectural governance and technical documentation initiatives across engineering squads.',
-      'Authoring and reviewing Architecture Decision Records (ADRs), capturing design rationale, trade-offs, and constraints for critical system choices that shape long-term platform direction.',
-      'Producing solution architecture documents for new features and integrations, translating business requirements into structured technical specifications consumed by development teams.',
-      'Mapping and documenting existing system landscapes — identifying integration patterns, data flows, and service dependencies to maintain an accurate picture of the current-state architecture.',
-      'Supporting the definition and enforcement of architectural standards and best practices, contributing to internal guidelines that promote consistency and scalability across microservices.',
-      'Participating in architecture review sessions and design critiques, providing structured feedback on technical proposals and ensuring alignment with established patterns and non-functional requirements.',
-      'Collaborating cross-functionally with engineering leads, product managers, and security teams to ensure architecture documentation reflects real constraints and organizational goals.',
-    ],
-    achievements: [
-      'Contributing to architectural governance at one of Brazil\'s leading digital banks',
-      'Building expertise in enterprise architecture documentation and ADR practices',
-      'Supporting architectural alignment across multiple squads through structured documentation',
-      'Developing a deep understanding of large-scale distributed systems in the financial sector',
-    ],
-    technologies: ['Software Architecture', 'ADR', 'C4 Model', 'Microservices', 'API Design', 'Technical Documentation', 'Architecture Governance', 'System Design', 'Integration Patterns', 'Cloud Architecture'],
-  },
-  {
     id: 'gft-java-intern',
     title: 'Software Developer Intern - Java',
     company: { name: 'GFT Technologies', link: 'https://www.gft.com/' },
     location: 'Brazil',
     startDate: '2025-10',
-    endDate: '2026-01',
-    current: false,
+    current: true,
     type: 'Internship',
     description: [
-      'Contributing to enterprise-grade Java application development within a dynamic Agile environment, gaining hands-on experience with modern backend technologies and cloud-native architectures.',
-      'Working with Spring Framework ecosystem to build robust, scalable microservices while implementing industry-standard security patterns using JWT and Keycloak for authentication and authorization.',
-      'Developing RESTful APIs following MVC architecture principles, leveraging JPA for efficient data persistence with PostgreSQL databases.',
-      'Collaborating on containerized deployments using Docker, ensuring consistent environments across development, testing, and production stages.',
-      'Participating in observability and monitoring initiatives using Prometheus and Grafana to track application performance, system health, and business metrics.',
-      'Gaining experience with distributed systems through event-driven architectures using Apache Kafka and RabbitMQ for asynchronous messaging and inter-service communication.',
-      'Implementing caching strategies with Redis to optimize application performance and reduce database load.',
-      'Managing project dependencies and build automation using Maven, following DevOps best practices for continuous integration and delivery.'
+      'Software Engineer at GFT Technologies, contributing to the development, support, and evolution of enterprise applications in Agile environments. Responsible for designing, developing, and maintaining backend solutions using Java and Spring Boot, with a focus on scalability, reliability, and software quality.',
+      'Collaborate on REST API development, system integrations, microservices-based architectures, and software architecture initiatives. Participate in technical analysis, solution design, code reviews, impact assessments, incident investigation, and production support. Work closely with cross-functional teams, applying software engineering best practices, technical documentation, and continuous improvement principles to deliver high-quality business solutions.'
     ],
     achievements: [
-      'Successfully delivered microservices features within sprint deadlines',
-      'Implemented authentication and authorization flows using JWT and Keycloak',
-      'Contributed to performance optimization resulting in reduced API response times',
-      'Gained proficiency in modern Java ecosystem and cloud-native patterns',
-      'Developed expertise in event-driven architectures and messaging systems'
+      'Contributed to Software Architecture initiatives supporting enterprise-scale applications.',
+      'Developed and maintained backend services and REST APIs using Java and Spring Boot.',
+      'Participated in the design and evolution of microservices and system integration solutions.',
+      'Supported production environments through incident investigation, root cause analysis, and bug resolution.',
+      'Produced technical documentation and architectural artifacts to improve system maintainability and knowledge sharing'
     ],
-    technologies: ['Java', 'Spring Framework', 'Angular', 'JWT', 'Keycloak', 'JPA', 'PostgreSQL', 'Docker', 'MVC', 'Prometheus', 'Grafana', 'Redis', 'Maven', 'Apache Kafka', 'RabbitMQ', 'REST APIs', 'Microservices']
+    technologies: ['Java', 'Spring Framework', 'Angular', 'JWT', 'Keycloak', 'JPA', 'PostgreSQL', 'Docker', 'MVC', 'Prometheus', 'Grafana', 'Redis', 'Maven', 'Apache Kafka', 'RabbitMQ', 'REST APIs', 'Microservices', 'Confluence', 'Jira', 'Git', 'Agile Methodologies']
   },
   {
     id: 'colegio-adventista-support',
