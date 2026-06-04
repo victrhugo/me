@@ -62,6 +62,43 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 'bible-study',
+    title: 'Bible Study - Adventist',
+    description: 'Developed a comprehensive Bible study platform for Adventist users, featuring interactive study guides, community forums, and personalized reading plans.',
+    longDescription: 'Built a complete Bible study platform for Adventist users, featuring interactive study guides, community forums, and personalized reading plans. The platform was designed with a focus on user engagement and accessibility, ensuring that users can easily navigate and utilize the various study resources available.',
+    category: 'Frontend',
+    status: 'Completed',
+    timeline: '2026',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    outcomes: [
+      'Delivered a fully functional Bible study platform for Adventist users',
+      'Implemented responsive, mobile-first design for all device sizes',
+      'Built interactive study guides and community forums',
+      'Created personalized reading plans to enhance user engagement',
+    ],
+    highlights: [
+      'Interactive study guides with multimedia content',
+      'Community forums for user engagement and discussion',
+      'Personalized reading plans based on user preferences',
+      'Mobile-first responsive design',
+      'Optimized performance for fast page loads',
+      'Clean brand-aligned UI/UX',
+    ],
+    challenges: [
+      'Translating the needs of Adventist users into a cohesive digital experience',
+      'Ensuring a smooth and intuitive user experience to maximize engagement',
+      'Optimizing images and assets for fast load times on mobile',
+    ],
+    learnings: [
+      'Practical experience delivering a production project for a real client',
+      'Deeper understanding of user engagement strategies in educational platforms',
+      'Importance of performance budgeting in content-rich applications'
+    ],
+    links: [
+      { type: 'demo', url: 'https://estudo-biblico-iasd.netlify.app/', label: 'Visit Site' }
+    ]
+  },
+  {
     id: 'hackathon-receita-federal',
     title: 'Simpli.fy - Sustainable IoT Solution',
     description: 'Developed an innovative environmental impact solution at Receita Federal Hackathon, transforming discarded VAPE components into functional IoT devices for sustainability monitoring.',

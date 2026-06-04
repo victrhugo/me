@@ -15,7 +15,7 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: 'gft-java-intern',
-    title: 'Software Developer Intern - Java',
+    title: 'Software Engineer - Java',
     company: { name: 'GFT Technologies', link: 'https://www.gft.com/' },
     location: 'Brazil',
     startDate: '2025-10',
