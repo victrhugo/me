@@ -185,7 +185,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
               {(isExpanded ? project.metrics : project.metrics.slice(0, 2)).map((metric, index) => (
                 <div
                   key={index}
-                  className={`text-center p-3 rounded-lg bg-background/50 transition-all duration-300 hover:bg-background/80 hover:scale-105 ${
+                  className={`text-center p-3 rounded-lg bg-muted transition-all duration-300 hover:bg-muted/70 hover:scale-105 ${
                     isExpanded ? 'border border-green/20' : ''
                   }`}
                   style={{ transitionDelay: isExpanded ? `${index * 50}ms` : '0ms' }}
@@ -213,7 +213,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
               {(isExpanded ? project.technologies : project.technologies.slice(0, 4)).map((tech, index) => (
                 <span
                   key={index}
-                  className={`text-xs bg-background/50 text-foreground px-2 py-1 rounded border transition-all duration-300 hover:border-green hover:bg-green/5 ${
+                  className={`text-xs bg-muted text-foreground px-2 py-1 rounded border transition-all duration-300 hover:border-green hover:bg-green/5 ${
                     isExpanded ? 'border-green/30' : 'border-border'
                   }`}
                   style={{ transitionDelay: isExpanded ? `${index * 30}ms` : '0ms' }}
@@ -401,7 +401,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
       {project.metrics && project.metrics.length > 0 && (
         <div className="grid grid-cols-2 gap-3 mb-4">
           {project.metrics.slice(0, 2).map((metric, index) => (
-            <div key={index} className="text-center p-2 rounded bg-background/30">
+            <div key={index} className="text-center p-2 rounded bg-muted">
               <div className={`text-sm font-semibold ${colorClasses.text}`}>
                 {metric.value}
               </div>
@@ -414,7 +414,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
       {/* Technologies */}
       <div className="flex flex-wrap gap-2 mb-3">
         {project.technologies.slice(0, 3).map((tech, index) => (
-          <span key={index} className="text-xs bg-background/50 text-foreground px-2 py-1 rounded border">
+          <span key={index} className="text-xs bg-muted text-foreground px-2 py-1 rounded border">
             {tech}
           </span>
         ))}

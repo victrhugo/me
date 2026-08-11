@@ -10,7 +10,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command"
-import { Link2, Code2, Home, User, Briefcase, FolderGit2, FileText, Mic } from "lucide-react"
+import { Link2, Code2, Home, User, Briefcase, Layers, FolderGit2, Mail } from "lucide-react"
 
 export function CommandPalette() {
   const [open, setOpen] = useState(false)
@@ -43,14 +43,16 @@ export function CommandPalette() {
           const handleNext = (nextE: KeyboardEvent) => {
             if (nextE.key === "h") {
               navigateTo("#")
-            } else if (nextE.key === "a") {
-              navigateTo("#about")
+            } else if (nextE.key === "m") {
+              navigateTo("#me")
             } else if (nextE.key === "e") {
               navigateTo("#experience")
+            } else if (nextE.key === "s") {
+              navigateTo("#skills")
             } else if (nextE.key === "p") {
               navigateTo("#projects")
-            } else if (nextE.key === "s") {
-              navigateTo("#speaking")
+            } else if (nextE.key === "c") {
+              navigateTo("#contact")
             }
             document.removeEventListener("keydown", handleNext)
           }
@@ -159,19 +161,19 @@ export function CommandPalette() {
               </div>
             </CommandItem>
 
-            <CommandItem onSelect={() => navigateTo("#about")} className="flex items-center justify-between py-3 px-4 rounded-lg hover:bg-muted/80 data-[selected=true]:bg-muted/80 transition-colors cursor-pointer">
+            <CommandItem onSelect={() => navigateTo("#me")} className="flex items-center justify-between py-3 px-4 rounded-lg hover:bg-muted/80 data-[selected=true]:bg-muted/80 transition-colors cursor-pointer">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-muted/50 flex items-center justify-center">
                   <User className="w-4 h-4 text-muted-foreground" />
                 </div>
                 <div>
-                  <span className="font-medium text-foreground">About</span>
+                  <span className="font-medium text-foreground">Me</span>
                   <p className="text-xs text-muted-foreground">Learn more about me</p>
                 </div>
               </div>
               <div className="flex gap-1">
                 <kbd className="px-2 py-1 text-xs bg-muted/50 border border-border rounded font-mono text-muted-foreground">G</kbd>
-                <kbd className="px-2 py-1 text-xs bg-muted/50 border border-border rounded font-mono text-muted-foreground">A</kbd>
+                <kbd className="px-2 py-1 text-xs bg-muted/50 border border-border rounded font-mono text-muted-foreground">M</kbd>
               </div>
             </CommandItem>
 
@@ -191,6 +193,22 @@ export function CommandPalette() {
               </div>
             </CommandItem>
 
+            <CommandItem onSelect={() => navigateTo("#skills")} className="flex items-center justify-between py-3 px-4 rounded-lg hover:bg-muted/80 data-[selected=true]:bg-muted/80 transition-colors cursor-pointer">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-muted/50 flex items-center justify-center">
+                  <Layers className="w-4 h-4 text-muted-foreground" />
+                </div>
+                <div>
+                  <span className="font-medium text-foreground">Skills</span>
+                  <p className="text-xs text-muted-foreground">Technologies I work with</p>
+                </div>
+              </div>
+              <div className="flex gap-1">
+                <kbd className="px-2 py-1 text-xs bg-muted/50 border border-border rounded font-mono text-muted-foreground">G</kbd>
+                <kbd className="px-2 py-1 text-xs bg-muted/50 border border-border rounded font-mono text-muted-foreground">S</kbd>
+              </div>
+            </CommandItem>
+
             <CommandItem onSelect={() => navigateTo("#projects")} className="flex items-center justify-between py-3 px-4 rounded-lg hover:bg-muted/80 data-[selected=true]:bg-muted/80 transition-colors cursor-pointer">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-muted/50 flex items-center justify-center">
@@ -207,19 +225,19 @@ export function CommandPalette() {
               </div>
             </CommandItem>
 
-            <CommandItem onSelect={() => navigateTo("#speaking")} className="flex items-center justify-between py-3 px-4 rounded-lg hover:bg-muted/80 data-[selected=true]:bg-muted/80 transition-colors cursor-pointer">
+            <CommandItem onSelect={() => navigateTo("#contact")} className="flex items-center justify-between py-3 px-4 rounded-lg hover:bg-muted/80 data-[selected=true]:bg-muted/80 transition-colors cursor-pointer">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-muted/50 flex items-center justify-center">
-                  <Mic className="w-4 h-4 text-muted-foreground" />
+                  <Mail className="w-4 h-4 text-muted-foreground" />
                 </div>
                 <div>
-                  <span className="font-medium text-foreground">Speaking</span>
-                  <p className="text-xs text-muted-foreground">Talks & workshops</p>
+                  <span className="font-medium text-foreground">Contact</span>
+                  <p className="text-xs text-muted-foreground">Get in touch</p>
                 </div>
               </div>
               <div className="flex gap-1">
                 <kbd className="px-2 py-1 text-xs bg-muted/50 border border-border rounded font-mono text-muted-foreground">G</kbd>
-                <kbd className="px-2 py-1 text-xs bg-muted/50 border border-border rounded font-mono text-muted-foreground">S</kbd>
+                <kbd className="px-2 py-1 text-xs bg-muted/50 border border-border rounded font-mono text-muted-foreground">C</kbd>
               </div>
             </CommandItem>
           </CommandGroup>

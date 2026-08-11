@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { FluidCursor } from "@/components/fluid-cursor"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -145,6 +146,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+        <FluidCursor />
         <Suspense fallback={
           <div className="min-h-screen flex items-center justify-center bg-background">
             <div className="flex flex-col items-center gap-6">
