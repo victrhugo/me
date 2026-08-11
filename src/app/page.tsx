@@ -129,7 +129,7 @@ export default function Home() {
               Hey, I&apos;m Victor 👋
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-balance animate-fade-up animate-delay-200">
-              <span className="gradient-text">Java Developer</span>
+              <span className="gradient-text">Software Engineer</span>
             </h1>
 
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 mb-10 animate-scale-in animate-delay-300">
