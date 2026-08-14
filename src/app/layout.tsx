@@ -1,19 +1,35 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
+import { Newsreader, Caveat } from "next/font/google"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import { FluidCursor } from "@/components/fluid-cursor"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
+import { SoundProvider } from "@/components/sound-provider"
+import { CommandPalette } from "@/components/command-palette"
+import { CursorTrail } from "@/components/cursor-trail"
 import "./globals.css"
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-newsreader",
+})
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  variable: "--font-caveat",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://victrhugo.com"),
   title: {
-    default: "Victor Hugo - Java Developer",
+    default: "Victor Hugo - Software Engineer",
     template: "%s | Victor Hugo"
   },
-  description: "Java Developer passionate about building scalable enterprise applications. Currently at GFT Technologies working with Spring, Angular, microservices, and cloud technologies. Focused on backend development and distributed systems.",
+  description: "Software Engineer passionate about building scalable enterprise applications. Currently at GFT Technologies working with Spring, Angular, microservices, and cloud technologies. Focused on backend development and distributed systems.",
   keywords: [
     "Victor Hugo",
     "Java Developer",
@@ -21,6 +37,7 @@ export const metadata: Metadata = {
     "Backend Developer",
     "Spring Boot",
     "Spring Framework",
+    "Quarkus",
     "Angular",
     "Microservices",
     "REST API",
@@ -35,7 +52,10 @@ export const metadata: Metadata = {
     "Maven",
     "JPA",
     "Hibernate",
+    "Terraform",
+    "AWS",
     "GFT Technologies",
+    "Itaú Unibanco",
     "Brazil",
     "Enterprise Applications",
     "Distributed Systems",
@@ -63,14 +83,14 @@ export const metadata: Metadata = {
         url: "/me.png",
         width: 759,
         height: 845,
-        alt: "Victor Hugo - Java Developer",
+        alt: "Victor Hugo - Software Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Victor Hugo - Java Developer",
-    description: "Java Developer passionate about building scalable enterprise applications with Spring, Angular, and microservices. Focused on backend development and distributed systems.",
+    title: "Victor Hugo - Software Engineer",
+    description: "Software Engineer passionate about building scalable enterprise applications with Spring, Angular, and microservices. Focused on backend development and distributed systems.",
     images: ["/me.png"],
     creator: "@victrhugo",
   },
@@ -104,7 +124,7 @@ export default function RootLayout({
     name: "Victor Hugo",
     url: "https://victrhugo.com",
     image: "https://victrhugo.com/me.png",
-    jobTitle: "Java Developer",
+    jobTitle: "Software Engineer",
     worksFor: {
       "@type": "Organization",
       name: "GFT Technologies",
@@ -118,6 +138,7 @@ export default function RootLayout({
       "Java",
       "Spring Framework",
       "Spring Boot",
+      "Quarkus",
       "Angular",
       "Microservices",
       "REST APIs",
@@ -126,6 +147,8 @@ export default function RootLayout({
       "Apache Kafka",
       "RabbitMQ",
       "Redis",
+      "Terraform",
+      "AWS",
       "Backend Development",
       "Distributed Systems",
     ],
@@ -145,29 +168,17 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <FluidCursor />
+      <body className={`font-serif ${newsreader.variable} ${caveat.variable} ${GeistMono.variable} antialiased`}>
+        <SoundProvider />
+        <CommandPalette />
+        <CursorTrail />
+        <SiteHeader />
         <Suspense fallback={
           <div className="min-h-screen flex items-center justify-center bg-background">
-            <div className="flex flex-col items-center gap-6">
-              <div className="relative w-20 h-20">
-                {/* Spinning gradient circle */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-pink via-purple to-cyan animate-spin opacity-75" style={{ animationDuration: '1.5s' }}></div>
-                <div className="absolute inset-2 rounded-full bg-background"></div>
-              </div>
-
-              {/* Animated text */}
-              <div className="flex items-center gap-2">
-                <span className="text-lg font-medium gradient-text animate-pulse">Loading</span>
-                <span className="flex gap-1">
-                  <span className="w-1.5 h-1.5 bg-pink rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
-                  <span className="w-1.5 h-1.5 bg-purple rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
-                  <span className="w-1.5 h-1.5 bg-cyan rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
-                </span>
-              </div>
-            </div>
+            <span className="font-mono text-sm text-muted-foreground animate-pulse">loading…</span>
           </div>
         }>{children}</Suspense>
+        <SiteFooter />
         <Analytics />
       </body>
     </html>

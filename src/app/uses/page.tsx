@@ -14,17 +14,17 @@ export default function UsesPage() {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
-        className={`w-3 h-3 ${i < rating ? 'fill-yellow text-yellow' : 'text-muted'}`}
+        className={`w-3 h-3 ${i < rating ? 'fill-amber text-amber' : 'text-muted'}`}
       />
     ))
   }
 
   const getPriceBadgeColor = (price?: string) => {
     switch (price) {
-      case 'Free': return 'bg-green/10 text-green'
+      case 'Free': return 'bg-muted text-muted-foreground'
       case 'Paid': return 'bg-orange/10 text-orange'
-      case 'Freemium': return 'bg-cyan/10 text-cyan'
-      default: return 'bg-muted/10 text-muted'
+      case 'Freemium': return 'bg-amber/10 text-amber'
+      default: return 'bg-muted text-muted-foreground'
     }
   }
 
@@ -35,7 +35,7 @@ export default function UsesPage() {
         <div className="mb-16 animate-fade-up">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-muted hover:text-cyan transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-muted hover:text-amber transition-colors mb-8"
           >
             ← Back to home
           </Link>
@@ -46,7 +46,7 @@ export default function UsesPage() {
             productivity, and daily work. Inspired by{' '}
             <Link
               href="https://uses.tech"
-              className="text-cyan hover:text-cyan/80 transition-colors"
+              className="text-amber hover:text-amber/80 transition-colors"
             >
               uses.tech
             </Link>.
@@ -78,7 +78,7 @@ export default function UsesPage() {
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-lg font-semibold text-foreground group-hover:text-cyan transition-colors">
+                          <h3 className="text-lg font-semibold text-foreground group-hover:text-amber transition-colors">
                             {tool.name}
                           </h3>
                           {tool.price && (
@@ -101,7 +101,7 @@ export default function UsesPage() {
                           href={tool.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-muted hover:text-cyan transition-colors"
+                          className="text-muted hover:text-amber transition-colors"
                           aria-label={`Visit ${tool.name}`}
                         >
                           <ExternalLink className="w-5 h-5" />

@@ -22,17 +22,18 @@ export const experiences: Experience[] = [
     current: true,
     type: 'Internship',
     description: [
-      'Software Engineer at GFT Technologies, contributing to the development, support, and evolution of enterprise applications in Agile environments. Responsible for designing, developing, and maintaining backend solutions using Java and Spring Boot, with a focus on scalability, reliability, and software quality.',
-      'Collaborate on REST API development, system integrations, microservices-based architectures, and software architecture initiatives. Participate in technical analysis, solution design, code reviews, impact assessments, incident investigation, and production support. Work closely with cross-functional teams, applying software engineering best practices, technical documentation, and continuous improvement principles to deliver high-quality business solutions.'
+      'Software Engineer at GFT Technologies, currently allocated to Itaú Unibanco, one of Brazil\'s largest banks, contributing to the development, support, and evolution of enterprise applications in Agile environments. Responsible for designing, developing, and maintaining backend solutions using Java, Spring Boot, and Quarkus, with a focus on scalability, reliability, and software quality.',
+      'Collaborate on REST API development, event-driven integrations with Apache Kafka, and cloud infrastructure on AWS provisioned with Terraform, alongside microservices-based architectures and software architecture initiatives. Participate in technical analysis, solution design, code reviews, impact assessments, incident investigation, and production support. Work closely with cross-functional teams, applying software engineering best practices, technical documentation, and continuous improvement principles to deliver high-quality business solutions.'
     ],
     achievements: [
-      'Contributed to Software Architecture initiatives supporting enterprise-scale applications.',
-      'Developed and maintained backend services and REST APIs using Java and Spring Boot.',
+      'Contributed to Software Architecture initiatives supporting enterprise-scale banking applications at Itaú Unibanco.',
+      'Developed and maintained backend services and REST APIs using Java, Spring Boot, and Quarkus.',
+      'Worked with event-driven integrations using Apache Kafka and cloud infrastructure on AWS provisioned with Terraform.',
       'Participated in the design and evolution of microservices and system integration solutions.',
       'Supported production environments through incident investigation, root cause analysis, and bug resolution.',
       'Produced technical documentation and architectural artifacts to improve system maintainability and knowledge sharing'
     ],
-    technologies: ['Java', 'Spring Framework', 'Angular', 'JWT', 'Keycloak', 'JPA', 'PostgreSQL', 'Docker', 'MVC', 'Prometheus', 'Grafana', 'Redis', 'Maven', 'Apache Kafka', 'RabbitMQ', 'REST APIs', 'Microservices', 'Confluence', 'Jira', 'Git', 'Agile Methodologies']
+    technologies: ['Java', 'Spring Framework', 'Spring Boot', 'Quarkus', 'Angular', 'JWT', 'Keycloak', 'JPA', 'PostgreSQL', 'Docker', 'MVC', 'Prometheus', 'Grafana', 'Redis', 'Maven', 'Apache Kafka', 'RabbitMQ', 'Terraform', 'AWS', 'REST APIs', 'Microservices', 'Confluence', 'Jira', 'Git', 'Agile Methodologies']
   },
   {
     id: 'colegio-adventista-support',

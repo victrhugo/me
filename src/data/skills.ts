@@ -10,7 +10,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: 'Backend & Architecture',
-    skills: ['Spring Framework', 'Spring Boot', 'REST APIs', 'Microservices', 'JPA / Hibernate', 'NestJS'],
+    skills: ['Spring Framework', 'Spring Boot', 'Quarkus', 'REST APIs', 'Microservices', 'JPA / Hibernate', 'NestJS'],
   },
   {
     title: 'Frontend',
@@ -21,8 +21,8 @@ export const skillCategories: SkillCategory[] = [
     skills: ['PostgreSQL', 'Redis', 'Apache Kafka', 'RabbitMQ'],
   },
   {
-    title: 'DevOps & Observability',
-    skills: ['Docker', 'Maven', 'Git', 'Prometheus', 'Grafana'],
+    title: 'DevOps & Cloud',
+    skills: ['Docker', 'Terraform', 'AWS', 'Maven', 'Git', 'Prometheus', 'Grafana'],
   },
   {
     title: 'Security & Practices',
