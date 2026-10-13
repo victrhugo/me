@@ -95,18 +95,8 @@
     /* Cover */
     .cover {
       position: relative; height: 270px; overflow: hidden;
-      background:
-        radial-gradient(1200px 300px at 20% 120%, #1e3a8a 0%, transparent 60%),
-        radial-gradient(800px 300px at 90% -20%, #0ea5e9 0%, transparent 55%),
-        linear-gradient(135deg, #0b1020 0%, #111827 60%, #0f172a 100%);
+      background: linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.28)), url(img/cover.jpg) center / cover;
       display: grid; place-items: center;
-    }
-    .cover pre {
-      position: absolute; inset: 0;
-      font: 12px/1.5 ui-monospace, Menlo, monospace;
-      color: rgba(148, 163, 184, .16);
-      padding: 18px 24px; white-space: pre; overflow: hidden;
-      user-select: none;
     }
     .cover p {
       position: relative;
@@ -324,22 +314,6 @@
 
   <!-- Cover -->
   <div class="cover">
-    <pre aria-hidden="true">@RestController
-@RequestMapping("/api/v1/accounts")
-public class AccountController {
-
-    private final AccountService service;
-
-    @GetMapping("/{id}")
-    public ResponseEntity&lt;AccountDto&gt; findById(@PathVariable UUID id) {
-        return service.findById(id)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -&gt; new NotFoundException(id));
-    }
-
-    @KafkaListener(topics = "account-events", groupId = "ledger")
-    public void on(AccountEvent event) { service.apply(event); }
-}</pre>
     <p>Make backends behave. Keep systems boring. Ship things that last.</p>
   </div>
 
