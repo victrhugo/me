@@ -1,0 +1,10 @@
+{
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "redirects": [
+    { "source": "/built", "destination": "/#work", "permanent": true },
+    { "source": "/am", "destination": "/", "permanent": true },
+    { "source": "/now", "destination": "/", "permanent": true }
+  ]
+}
